@@ -1,6 +1,6 @@
 const express = require('express');
-const CategoryRoutes = require('./routes/CategoryRoutes.js');
-const database = require('./config/Database.js');
+// const CategoryRoutes = require('./routes/CategoryRoutes.js');
+// const database = require('./config/Database.js');
 
 const app = express();
 const port = process.env.PORT;
