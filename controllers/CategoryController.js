@@ -1,6 +1,6 @@
-import { Categories } from "../models/CategoryModel.js";
-import moment from "moment";
-import { v4 as uuidv4 } from 'uuid'; 
+const Categories = require('../models/CategoryModel.js');
+const moment = require('moment');
+const uuidv4 = require('uuid');
 
 export async function getAllCategories(req,res){
 

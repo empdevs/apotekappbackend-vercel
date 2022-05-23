@@ -1,4 +1,4 @@
-import database from "../config/Database.js";
+const database = require("../config/Database.js");
 
 //create table category
 database.connect(function(error){

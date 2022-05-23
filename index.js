@@ -1,11 +1,9 @@
-// import express from "express";
-// import database from "./config/Database.js";
-// import CategoryRoutes from './routes/CategoryRoutes.js'; 
-
 const express = require('express');
+const CategoryRoutes = require('./routes/CategoryRoutes.js');
+const database = require('./config/Database.js');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
 //check connection database
 // try{
@@ -27,15 +25,15 @@ app.use(express.json());
 //support parsing of application/x-www-form-urlencoded post data
 app.use(express.urlencoded({extended: true}));
 
-app.use('/api/test/', (req, res)=>{
+//Route API
+// app.use('/api/category/',CategoryRoutes);
+app.use('/api/category/',(req, res)=>{
 
-    res.json({
+    res.send({
         "message" : "success"
     })
 
-}); 
-//Route API
-// app.use('/api/category/',CategoryRoutes);
+});
 
 //server running
 app.listen(port,()=>{
