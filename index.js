@@ -1,6 +1,6 @@
 const express = require('express');
-// const CategoryRoutes = require('./routes/CategoryRoutes.js');
-// const database = require('./config/Database.js');
+const CategoryRoutes = require('./routes/CategoryRoutes.js');
+const database = require('./config/Database.js');
 
 const app = express();
 const port = process.env.PORT;
@@ -26,16 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 //Route API
-// app.use('/api/category/',CategoryRoutes);
-app.use('/api/category/',(req, res)=>{
-
-    res.send({
-
-        "message" : "success"
-        
-    })
-
-});
+app.use('/api/category/',CategoryRoutes);
 
 //server running
 app.listen(port,()=>{
